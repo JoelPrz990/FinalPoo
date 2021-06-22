@@ -7,15 +7,12 @@ package proyecto.pkgfinal;
 
 /**
  *
- * @author user
+ * @author Joel
  */
 public class ProyectoFinal {
-
-    /**
-     * @param args the command line arguments
-     */
+    CarteraCliente cc = new CarteraCliente();
     public static void main(String[] args) {
-        // TODO code application logic here
+        cc.CarteraClientes
     }
     
 }
