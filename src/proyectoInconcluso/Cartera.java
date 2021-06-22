@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto.pkgfinal;
+package proyectoInconcluso;
 
 import java.awt.Component;
 import java.util.ArrayList;
@@ -61,11 +61,6 @@ public class Cartera extends javax.swing.JFrame {
                 agregarComponentAdded(evt);
             }
         });
-        agregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarActionPerformed(evt);
-            }
-        });
 
         verCliente.setText("Ver clientes registrados");
         verCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -116,10 +111,6 @@ public class Cartera extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_agregarActionPerformed
 
     private void verClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verClienteActionPerformed
         // TODO add your handling code here:
