@@ -27,7 +27,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="msgBienvenida" pref="475" max="32767" attributes="0"/>
+              <Component id="msgBienvenida" pref="341" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -86,6 +86,7 @@
         <Property name="text" type="java.lang.String" value="Agregar Cliente"/>
       </Properties>
       <Events>
+        <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="agregarComponentAdded"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agregarActionPerformed"/>
       </Events>
     </Component>
@@ -93,11 +94,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver clientes registrados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="verClienteActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="eliminar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar registro"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

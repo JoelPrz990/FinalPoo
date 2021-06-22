@@ -5,9 +5,17 @@
  */
 package proyecto.pkgfinal;
 
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
- * @author user
+ * @author Joel
  */
 public class Cartera extends javax.swing.JFrame {
 
@@ -18,7 +26,8 @@ public class Cartera extends javax.swing.JFrame {
         setTitle("Cartera de Clientes");
         initComponents();
     }
-
+     List <cliente> clientes = new   ArrayList<>();
+     cliente cl;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,6 +56,11 @@ public class Cartera extends javax.swing.JFrame {
         msgAccion.setText("¿Qué accion desea realizar?");
 
         agregar.setText("Agregar Cliente");
+        agregar.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                agregarComponentAdded(evt);
+            }
+        });
         agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarActionPerformed(evt);
@@ -54,8 +68,18 @@ public class Cartera extends javax.swing.JFrame {
         });
 
         verCliente.setText("Ver clientes registrados");
+        verCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verClienteActionPerformed(evt);
+            }
+        });
 
         eliminar.setText("Eliminar registro");
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,7 +87,7 @@ public class Cartera extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(msgBienvenida, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
+                .addComponent(msgBienvenida, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(46, 46, 46)
@@ -95,13 +119,26 @@ public class Cartera extends javax.swing.JFrame {
 
     private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
         // TODO add your handling code here:
-        System.out.println("");
     }//GEN-LAST:event_agregarActionPerformed
+
+    private void verClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_verClienteActionPerformed
+
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminarActionPerformed
+
+    private void agregarComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_agregarComponentAdded
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_agregarComponentAdded
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+       
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -124,7 +161,7 @@ public class Cartera extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Cartera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
